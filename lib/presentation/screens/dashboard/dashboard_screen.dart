@@ -13,8 +13,9 @@ class DashBoardScreen extends StatelessWidget {
             body: SingleChildScrollView(
               child: Obx((() {
                 return SizedBox(
-                  height: Get.height,
+                  height: MediaQuery.of(context).size.height,
                   child: ListView.builder(
+                    shrinkWrap: true,
                     itemCount: controller.employeeData.length,
                     itemBuilder: ((context, index) {
                       return DashbaordWidgets.dataLIst(
